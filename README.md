@@ -52,3 +52,7 @@ Rainforest allows agents to execute research tasks, but every task must declare 
 - `tool_executed`
 
 Mock results must never be presented as real evidence.
+
+## License
+
+MIT License. See [LICENSE](LICENSE).
