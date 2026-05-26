@@ -1,0 +1,38 @@
+forest_id: quant_a_share_mock
+cycle_id: cycle_001
+research_goal: "Explore high-potential A-share alpha research directions while preserving useful failures."
+domain: "quant_a_share"
+approval_policy: "Ask before tool_executed tasks that use external market data or create new files outside the archive."
+constraints:
+  - "No live trading."
+  - "No profitability claims."
+  - "All sample results are stub_result."
+climate:
+  mode: exploration
+  temperature: 1.2
+  seed_budget: 0.30
+  seed_slots: 3
+  max_tree_share: 0.30
+  max_consecutive_depth: 2
+data_soil:
+  price_volume: 0.7
+  fundamentals: 0.4
+  analyst_forecast: 0.2
+  fund_flow: 0.5
+  news_text: 0.1
+trees:
+  - tree_id: fund_flow
+    name: "Fund flow persistence"
+    core_logic: "Institutional flow may create short-horizon continuation, but turnover and distribution can invert the signal."
+    status: active
+    recent_budget_share: 0.24
+  - tree_id: industry_rotation
+    name: "Industry rotation"
+    core_logic: "Policy and liquidity regimes may rotate leadership across industries."
+    status: active
+    recent_budget_share: 0.16
+golden_leaf_pool:
+  - "Fund inflow failed during high-turnover windows but hinted at a reversal boundary."
+sick_leaf_warnings:
+  - "Do not use future constituents or post-event industry membership."
+summary: "Early exploration prioritizes high-potential seeds and counterfactual checks."
