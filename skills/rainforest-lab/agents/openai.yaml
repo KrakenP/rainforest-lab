@@ -1,0 +1,3 @@
+display_name: Rainforest Lab
+short_description: Manage open-ended research with trees, seeds, weather routing, and useful failure memory.
+default_prompt: Use Rainforest Lab to ground my research goal, organize trees and seeds, route attention with weather, and produce the next cycle plan.
