@@ -1,5 +1,7 @@
 # Rainforest Lab
 
+[简体中文](README.zh-CN.md)
+
 Rainforest Lab is a seeded, weather-guided research framework for AI agents.
 
 The v0.1 repository is skill-first: its primary artifact is `skills/rainforest-lab/`, a reusable Agent Skill for Claude, Codex, and similar coding agents.
