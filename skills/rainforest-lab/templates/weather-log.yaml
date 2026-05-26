@@ -1,0 +1,20 @@
+# Weather log template.
+cycle_id: cycle_001
+climate_mode: exploration
+temperature: 1.2
+seed_budget: 0.25
+allocations:
+  seed_nursery: 0.25
+weather_events:
+  - target: tree_001
+    target_type: tree
+    weather: drizzle
+    allocation: 0.10
+    reason: "Initial maintenance allocation until grounding provides stronger evidence."
+  - target: seed_nursery
+    target_type: seed_pool
+    weather: rain
+    allocation: 0.25
+    reason: "High-potential seed discovery is prioritized in early exploration."
+notes:
+  - "Every weather event must include a reason."
