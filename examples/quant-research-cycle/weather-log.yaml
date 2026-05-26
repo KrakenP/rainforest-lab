@@ -1,0 +1,25 @@
+cycle_id: cycle_001
+climate_mode: exploration
+temperature: 1.2
+seed_budget: 0.30
+allocations:
+  fund_flow: 0.20
+  industry_rotation: 0.18
+  seed_nursery: 0.30
+  archive_memory: 0.07
+weather_events:
+  - target: fund_flow
+    target_type: tree
+    weather: heatwave
+    allocation: 0.20
+    reason: "Promising but recent budget share is high, so the next task must be counterfactual."
+  - target: industry_rotation
+    target_type: tree
+    weather: rain
+    allocation: 0.18
+    reason: "Strong regime relevance and lower recent budget share."
+  - target: seed_nursery
+    target_type: seed_pool
+    weather: heavy_rain
+    allocation: 0.30
+    reason: "High-potential seed discovery is prioritized in cycle_001."

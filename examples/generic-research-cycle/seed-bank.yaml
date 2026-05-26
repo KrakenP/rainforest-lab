@@ -1,0 +1,35 @@
+cycle_id: cycle_001
+seed_policy:
+  seed_slots: 3
+  high_potential_bias: true
+  quarantine_leakage_threshold: 0.8
+scoring_weights:
+  novelty: 0.25
+  logic_strength: 0.20
+  option_value: 0.15
+  cross_tree_potential: 0.15
+  regime_relevance: 0.10
+  evidence_hint: 0.10
+  data_availability: 0.05
+  validation_cost: -0.15
+  leakage_risk: -0.20
+  redundancy: -0.10
+seeds:
+  - seed_decision_cards
+    idea: "Add decision cards that explain when to choose one workflow over another."
+    source_type: golden_leaf
+    related_trees: [onboarding_clarity, examples_quality]
+    scores:
+      novelty: 0.7
+      logic_strength: 0.8
+      option_value: 0.7
+      cross_tree_potential: 0.8
+      regime_relevance: 0.5
+      evidence_hint: 0.5
+      data_availability: 0.8
+      validation_cost: 0.2
+      leakage_risk: 0.0
+      redundancy: 0.2
+    status: hold
+    validation_plan: "Create a small before/after doc excerpt and ask for preference evidence."
+    reason: "Golden Leaf from checklist-only failure suggests decision support."

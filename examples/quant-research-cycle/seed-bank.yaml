@@ -1,0 +1,53 @@
+cycle_id: cycle_001
+seed_policy:
+  seed_slots: 3
+  high_potential_bias: true
+  quarantine_leakage_threshold: 0.8
+scoring_weights:
+  novelty: 0.25
+  logic_strength: 0.20
+  option_value: 0.15
+  cross_tree_potential: 0.15
+  regime_relevance: 0.10
+  evidence_hint: 0.10
+  data_availability: 0.05
+  validation_cost: -0.15
+  leakage_risk: -0.20
+  redundancy: -0.10
+seeds:
+  - seed_id: seed_turnover_inversion
+    idea: "Fund inflow may become a reversal signal when turnover is abnormally high."
+    source_type: golden_leaf
+    related_trees: [fund_flow]
+    scores:
+      novelty: 0.8
+      logic_strength: 0.7
+      option_value: 0.8
+      cross_tree_potential: 0.5
+      regime_relevance: 0.6
+      evidence_hint: 0.6
+      data_availability: 0.7
+      validation_cost: 0.4
+      leakage_risk: 0.2
+      redundancy: 0.3
+    status: hold
+    validation_plan: "Stub only: compare continuation vs reversal buckets by turnover regime."
+    reason: "Golden Leaf suggests a boundary condition."
+  - seed_id: seed_policy_rotation
+    idea: "Policy-sensitive industries may show stronger rotation after liquidity easing signals."
+    source_type: regime
+    related_trees: [industry_rotation]
+    scores:
+      novelty: 0.7
+      logic_strength: 0.6
+      option_value: 0.7
+      cross_tree_potential: 0.6
+      regime_relevance: 0.8
+      evidence_hint: 0.4
+      data_availability: 0.4
+      validation_cost: 0.5
+      leakage_risk: 0.3
+      redundancy: 0.2
+    status: hold
+    validation_plan: "Stub only: define policy event windows before any performance check."
+    reason: "Regime seed with high option value."

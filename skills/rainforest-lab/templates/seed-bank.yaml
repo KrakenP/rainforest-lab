@@ -1,0 +1,38 @@
+# Seed bank template.
+# Capture seeds continuously, then score and rank before sowing.
+cycle_id: cycle_001
+seed_policy:
+  seed_slots: 3
+  high_potential_bias: true
+  quarantine_leakage_threshold: 0.8
+scoring_weights:
+  novelty: 0.25
+  logic_strength: 0.20
+  option_value: 0.15
+  cross_tree_potential: 0.15
+  regime_relevance: 0.10
+  evidence_hint: 0.10
+  data_availability: 0.05
+  validation_cost: -0.15
+  leakage_risk: -0.20
+  redundancy: -0.10
+seeds:
+  - seed_id: seed_001
+    idea: "A high-potential direction to validate cheaply."
+    source_type: genesis
+    related_trees: []
+    scores:
+      novelty: 0.8
+      logic_strength: 0.7
+      option_value: 0.8
+      cross_tree_potential: 0.6
+      regime_relevance: 0.5
+      evidence_hint: 0.4
+      data_availability: 0.6
+      validation_cost: 0.4
+      leakage_risk: 0.2
+      redundancy: 0.2
+    seed_score: null
+    status: hold
+    validation_plan: "Define the cheapest first check before sowing."
+    reason: "Initial placeholder seed; replace with grounded research idea."

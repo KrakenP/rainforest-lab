@@ -1,0 +1,34 @@
+# Rainforest forest state template.
+# Copy this file into a research archive and update it after each cycle.
+forest_id: rainforest_demo
+cycle_id: cycle_001
+research_goal: "Explore high-potential research directions without over-focusing on one hypothesis."
+domain: "generic_research"
+approval_policy: "Ask before tool_executed work that changes files, spends money, or uses external accounts."
+constraints:
+  - "No paid APIs by default."
+  - "Do not present stub results as evidence."
+climate:
+  mode: exploration
+  temperature: 1.2
+  seed_budget: 0.25
+  seed_slots: 3
+  max_tree_share: 0.30
+  max_consecutive_depth: 2
+  novelty_weight: 0.35
+data_soil:
+  documents: 0.5
+  code: 0.5
+  datasets: 0.2
+  external_tools: 0.2
+trees:
+  - tree_id: tree_001
+    name: "Primary research direction"
+    core_logic: "The first established direction to investigate."
+    status: active
+    recent_budget_share: 0.0
+    max_initial_budget_share: 0.18
+    notes: []
+golden_leaf_pool: []
+sick_leaf_warnings: []
+summary: "Initial Rainforest state. Update after grounding and each cycle."

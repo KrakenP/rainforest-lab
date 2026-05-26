@@ -1,0 +1,30 @@
+# Single tree profile template.
+tree_id: tree_001
+name: "Research direction"
+core_logic: "Why this direction could matter."
+status: active
+priors:
+  terrain_fit: 0.5
+  regime_fit: 0.5
+  data_readiness: 0.5
+  logic_strength: 0.5
+  novelty_potential: 0.5
+  cross_pollination_potential: 0.5
+soil:
+  data_quality: 0.5
+  latency_risk: 0.5
+  transaction_cost_risk: 0.5
+  capacity_limit: 0.5
+  leakage_risk: 0.5
+weather:
+  moisture: 0.5
+  drought_need: 0.0
+  attention_prior: 0.0
+  recent_budget_share: 0.0
+  recent_success_rate: 0.0
+  dormancy: 0.0
+  overdigging: 0.0
+  redundancy: 0.0
+  overfit_risk: 0.0
+  golden_leaf_density: 0.0
+notes: []
