@@ -22,7 +22,7 @@ def _factor(returns: np.ndarray) -> pd.Series:
 
 
 def test_net_sharpe_nan_for_short_series() -> None:
-    # Helper produces 4 symbols × N periods rows. To trip the < 12 guard, use 2 periods.
+    # Helper produces 4 symbols x N periods rows. To trip the < 12 guard, use 2 periods.
     factor = _factor(np.arange(2))
     fwd = factor.copy()
     assert np.isnan(net_sharpe(factor, fwd, fee_bp=8.54, periods_per_year=12))
