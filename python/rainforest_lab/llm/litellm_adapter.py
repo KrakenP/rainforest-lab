@@ -24,7 +24,7 @@ from rainforest_lab.llm.protocols import Aligner, Gardener, Inspector, Skeptic
 
 def _require_litellm() -> Any:
     try:
-        import litellm  # type: ignore[import-not-found]
+        import litellm
     except ImportError as exc:  # pragma: no cover — exercised by the missing-dep test
         raise ImportError(
             "litellm is required for the LiteLLM adapter; "
