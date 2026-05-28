@@ -3,7 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any, Literal
 
-import yaml  # type: ignore[import-untyped]
+import yaml
 from pydantic import BaseModel, Field
 
 ExecutionMode = Literal["plan_only", "manual_result", "stub_result", "tool_executed"]
