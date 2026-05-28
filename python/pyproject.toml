@@ -35,6 +35,9 @@ dev = [
   "pytest-cov>=4.1",
   "ruff>=0.5",
   "mypy>=1.10",
+  "pandas-stubs>=2.1",
+  "types-PyYAML>=6.0",
+  "types-jsonschema>=4.20",
   "build>=1.0",
   "twine>=5.0",
 ]
