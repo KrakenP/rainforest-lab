@@ -8,14 +8,13 @@ version = "0.1.0"
 description = "Honest multi-agent research framework — engine + DSL/gates kits + LLM Protocols"
 readme = "README.md"
 requires-python = ">=3.11"
-license = {file = "../LICENSE"}
+license = "MIT"
 authors = [{name = "Rainforest Lab Contributors"}]
 keywords = ["multi-agent", "research", "llm", "factor-mining", "agent-skill"]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
   "Intended Audience :: Science/Research",
-  "License :: OSI Approved :: MIT License",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Typing :: Typed",
