@@ -33,6 +33,18 @@ Every research task must declare one mode:
 
 Stub results are not evidence. Tool-executed results must include enough detail to inspect or rerun.
 
+## Multi-Agent Collaboration (v2.0)
+
+Default to a multi-agent deliberation inside each cycle when more than one tree is being mined, or when LLM self-favoring is a known risk. The cast and the deliberation loop are documented in `references/multi-agent-collaboration.md`; the discipline below is binding.
+
+- **Coordinator is the sole writer** of forest state. Per-tree deliberation is pure: read the forest, return candidate data, let the coordinator merge.
+- **Parallel competing gardeners** — one per allocated tree, distinct temperature or style. Merge results in a deterministic `tree_id`-sorted order so the cycle is reproducible.
+- **Adversarial skeptic with a different model family than the gardener.** The skeptic critiques hypotheses (cull / revise / proceed across bounded debate rounds) and challenges fruit-candidates pre-G7. The fruit-candidate challenge is **recorded only — it cannot veto a passing gate battery**, the same way a debated stub cannot become a fruit.
+- **No silent fallback.** Skeptic or LLM unavailable means hard fail. A passing fruit can be debated but cannot be downgraded by an LLM; a stub can be debated but cannot be upgraded.
+- **Backward compatible**: `max_debate_rounds = 0` plus a single gardener reproduces the v1 single-pass loop.
+
+New event types (agent-attributed, on `events.jsonl`): `gardener_parallel_dispatch`, `debate_round`, `skeptic_challenge`.
+
 ## Load References
 
 - For starting a forest, read `references/forest-grounding.md`.
@@ -41,6 +53,7 @@ Stub results are not evidence. Tool-executed results must include enough detail 
 - For low-cost seed checks, read `references/nursery.md`.
 - For classifying outcomes, read `references/result-classification.md`.
 - For memory updates and reports, read `references/archive-memory.md`.
+- For the v2.0 multi-agent deliberation loop (skeptic, parallel gardeners, debate rounds), read `references/multi-agent-collaboration.md`.
 
 ## Use Templates
 
